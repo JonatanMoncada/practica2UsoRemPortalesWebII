@@ -1,0 +1,61 @@
+$fondoBody:#f2f2f2;
+$colorFondoContenedor:coral;
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@mixin boton($colorFondo){
+    padding: 1.4rem 2rem;
+    background-color: $colorFondo;
+    border: none;
+    border-radius: 1rem;
+    color: white;
+    font-size: 1.6rem;
+}
+
+html{
+    font-size: 62.5%;
+
+    body{
+        background-color: #f2f2f2;
+        font-family: sans-serif;
+
+        .contenedor{
+            background-color: coral;
+            color: #fff;
+            width: 90%;
+            max-width: 80rem;
+            padding: 2rem;
+            border-radius: 1rem;
+            margin: 3rem auto;
+            box-shadow: 0.2rem 0.2rem 0.2rem #ccc;
+            font-size: 2rem;
+
+            h1{
+                font-size: 3rem;
+                font-weight: normal;
+            }
+
+            hr{
+                margin: 1rem auto;
+            }
+
+            p{
+                line-height: 1.8;
+                padding: 1rem;
+            }
+
+            button{
+                @include boton(green);
+
+                &:hover{
+                    background-color: rgba(255, 255, 255, .2);
+                    color: #000;
+                }
+            }
+        }
+    }
+}
